@@ -15,10 +15,12 @@ object P04 extends App {
 
   // Tail recursive solution.  Theoretically more efficient; with tail-call
   // elimination in the compiler, this would run in constant space.
-  // Unfortunately, the JVM doesn't do tail-call elimination in the general
-  // case.  Scala *will* do it if the method is either final or is a local
-  // function.  In this case, `lengthR` is a local function, so it should
-  // be properly optimized.
+  
+  // Unfortunately, the JVM doesn't do tail-call elimination in the general case.  
+  // Scala *will* do it if the method is either final or is a local function.  
+  
+  //In this case, `lengthR` is a local function, so it should be properly optimized.
+  
   // For more information, see
   // http://blog.richdougherty.com/2009/04/tail-calls-tailrec-and-trampolines.html
   def lengthTailRecursive[A](ls: List[A]): Int = {
